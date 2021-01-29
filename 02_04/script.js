@@ -1,21 +1,25 @@
 // JavaScript Document
 
-// Create the game score
+// Create a variable
 var myScore;
+init(1000);
+changeScore(100);
+changeScore(50);
+changeScore(-250);
+changeScore(125);
 
-// Setup and change the game score
-init();
-changeScore();
-
-// Function to initialize the game score in the game
-function init()
-{
-    myScore = 1000;
+function init(newScore) {
+  console.log('Setting the score to ' + newScore);
+  myScore = newScore;
+  displayScore();
 }
 
-// Function to change the score of the game
-function changeScore()
-{
-    myScore = myScore + 100;
-    console.log("Player score: " + myScore);
+function changeScore(scoreDelta) {
+  console.log('Changing the score by ' + scoreDelta);
+  myScore = myScore + scoreDelta;
+  displayScore();
+}
+
+function displayScore() {
+  console.log('Player score: ' + myScore);
 }
