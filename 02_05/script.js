@@ -4,26 +4,24 @@
 var outsideValue = 5;
 
 // Output variables to the console
-console.log("From outside: outsideValue = " + outsideValue);
-console.log("From outside: functionValue = " + functionValue);
+// console.log("From outside: outsideValue = " + outsideValue);
+// console.log("From outside: functionValue = " + functionValue);
 
-//myFunction();
+myFunction();
 
-//myOtherFunction();
+function myFunction() {
+  // Create variable insode of a function
+  var functionValue = 10;
 
-function myFunction()
-{
-    // Create variable insode of a function
-    var functionValue = 10;
+  // Output variables to the console
+  console.log('From inside: outsideValue = ' + outsideValue);
+  console.log('From inside: functionValue = ' + functionValue);
 
-    // Output variables to the console
-    console.log("From inside: outsideValue = " + outsideValue);
-    console.log("From inside: functionValue = " + functionValue);
+  myOtherFunction();
 }
 
-function myOtherFunction()
-{
-    // Output variables to the console
-    console.log("From inside: outsideValue = " + outsideValue);
-    console.log("From inside: functionValue = " + functionValue);
+function myOtherFunction() {
+  // Output variables to the console
+  console.log('From inside: outsideValue = ' + outsideValue);
+  console.log('From inside: functionValue = ' + functionValue);
 }
